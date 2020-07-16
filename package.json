@@ -1,0 +1,19 @@
+{
+  "name": "paper-stone-scissors",
+  "version": "1.0.0",
+  "description": "",
+  "main": "js/script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TomaszJarosiewicz/paper-stone-scissors.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TomaszJarosiewicz/paper-stone-scissors/issues"
+  },
+  "homepage": "https://github.com/TomaszJarosiewicz/paper-stone-scissors#readme"
+}
