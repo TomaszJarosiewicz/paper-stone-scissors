@@ -1,4 +1,3 @@
-/* Mixin */
 /* Variables */
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
 /* Global */
@@ -33,7 +32,6 @@ body {
   border-radius: 50%;
   width: 100px;
   height: 100px;
-  transition: all .5s ease-in;
 }
 
 .winner > .fas {

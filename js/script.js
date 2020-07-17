@@ -24,7 +24,6 @@ const computerCount = document.querySelector('.computer-count');
 const randomItem = [chooseItem];
 let counter = 0;
 
-
 const playGame = (() => {
 
     const createItemPlayer = () => {
@@ -60,7 +59,7 @@ const playGame = (() => {
     const returnItems = () => {
         for(let i = 2; i < displayItems.length; i++) {
             displayItems[0].addEventListener('click', () => {
-                counter++
+                counter++;
                 createItemPlayer();
                 createItemComputer();
                 allItems.forEach(itemP => {
