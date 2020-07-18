@@ -22,7 +22,7 @@ const game = document.querySelector('.game');
 const playerCount = document.querySelector('.count');
 const computerCount = document.querySelector('.computer-count');
 const randomItem = [chooseItem];
-let counter = 0;
+let counter = 1;
 
 const playGame = (() => {
 
@@ -56,10 +56,9 @@ const playGame = (() => {
         }
     }
 
-    const returnItems = () => {
-        for(let i = 2; i < displayItems.length; i++) {
+    const returnItemsPaper = () => {
+        for(let i = 0; i < displayItems.length; i++) {
             displayItems[0].addEventListener('click', () => {
-                counter++;
                 createItemPlayer();
                 createItemComputer();
                 allItems.forEach(itemP => {
@@ -80,7 +79,11 @@ const playGame = (() => {
                     });
                 });
             });
+        }
+    }
 
+    const returnItemsStone = () => {
+        for(let i = 0; i < displayItems.length; i++) {
             displayItems[1].addEventListener('click', () => {
                 createItemPlayer();
                 createItemComputer();
@@ -102,7 +105,11 @@ const playGame = (() => {
                     });
                 });
             });
+        }
+    }
 
+    const returnItemsScissors = () => {
+        for(let i = 0; i < displayItems.length; i++) {
             displayItems[2].addEventListener('click', () => {
                 createItemPlayer();
                 createItemComputer();
@@ -127,10 +134,13 @@ const playGame = (() => {
         }
     }
 
+
     return {
         showReturnItems: () => {
             displayItemsPlayer();
-                returnItems();
+            returnItemsPaper();
+            returnItemsStone();
+            returnItemsScissors();
         }
     }
 
