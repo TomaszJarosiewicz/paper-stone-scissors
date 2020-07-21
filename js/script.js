@@ -14,138 +14,111 @@ const items = [
 ];
 
 let allItems = Object.assign(items);
-const chooseItem = allItems[Math.floor(Math.random() * allItems.length)];
-const displayItems = document.querySelectorAll('.flex > .item');
-const firstElement = document.createElement('div');
-const secondElement = document.createElement('div');
+const playPaper = document.querySelector('#playPaper');
+const playStone = document.querySelector('#playStone');
+const playScissors = document.querySelector('#playScissors');
+const showPlayerItem = document.querySelector('.showPlayerItem');
+const showComputerItem = document.querySelector('.showComputerItem');
 const game = document.querySelector('.game');
-const playerCount = document.querySelector('.count');
+const playerCount = document.querySelector('.player-count');
 const computerCount = document.querySelector('.computer-count');
-const randomItem = [chooseItem];
+let chooseItem;
 let counter = 1;
+
+playerCount.innerHTML = 0;
+computerCount.innerHTML = 0;
 
 const playGame = (() => {
 
-    const createItemPlayer = () => {
-        game.prepend(firstElement);
-        firstElement.setAttribute('class', 'player');
-    }
+    const randomItem = () => {
+        chooseItem = allItems[Math.floor(Math.random() * allItems.length)];
+            [chooseItem].forEach(item => {
+                showComputerItem.innerHTML = item.item;
+            });
+            return chooseItem.id;
+        }
 
-    const createItemComputer = () => {
-        game.append(secondElement);
-        secondElement.setAttribute('class', 'computer');
-    }
-
-    const addClassForWinner = (element) => {
-        element.classList.add('winner');
-    }
+    // const addClassForWinner = (element) => {
+    //     return element.classList.add('winner');
+    // }
+    // const removeClassForWinner = (element) => {
+    //     return element.classList.add('winner');
+    // }
 
     const displayItemsPlayer = () => {
-        for(let i = 0; i < displayItems.length; i++) {
-            allItems.forEach(index => {
-                if(index.id === 1) {
-                    displayItems[0].innerHTML = index.item;
-                }
-                if(index.id === 2) {
-                    displayItems[1].innerHTML = index.item;
-                }
-                if(index.id === 3) {
-                    displayItems[2].innerHTML = index.item;
-                }
-            });
-        }
-    }
-
-    const returnItemsPaper = () => {
-        for(let i = 0; i < displayItems.length; i++) {
-            displayItems[0].addEventListener('click', () => {
-                createItemPlayer();
-                createItemComputer();
-                allItems.forEach(itemP => {
-                    if(itemP.id === 1) {
-                        firstElement.innerHTML = itemP.item;
-                    }
-                    randomItem.forEach(itemC => {
-                        secondElement.innerHTML = itemC.item;
-                        if(itemC.id === 2) {
-                            playerCount.innerHTML = counter;
-                            addClassForWinner(firstElement);
-                        } else if(itemP.id === itemC.id) {
-                            console.log('remis');
-                        } if(itemC.id === 3) {
-                            computerCount.innerHTML = counter;
-                            addClassForWinner(secondElement);
+        allItems.forEach(el => {
+            if(el.id === 1) {
+                playPaper.addEventListener('click', () => {
+                    const paper = el.item;
+                    showPlayerItem.innerHTML = paper;
+                    showComputerItem.innerHTML = randomItem();
+                    counter++;
+                    if(counter) {
+                        if(randomItem() === 1) {
+                            console.log('Draw');
+                            return;
+                            } else if(randomItem() === 2) {
+                                console.log('Player wins');
+                            } else if(randomItem() === 3) {
+                                console.log('Computer wins');
+                        } else {
+                            return;
                         }
-                    });
-                });
-            });
-        }
-    }
-
-    const returnItemsStone = () => {
-        for(let i = 0; i < displayItems.length; i++) {
-            displayItems[1].addEventListener('click', () => {
-                createItemPlayer();
-                createItemComputer();
-                allItems.forEach(itemP => {
-                    if(itemP.id === 2) {
-                        firstElement.innerHTML = itemP.item;
                     }
-                    randomItem.forEach(itemC => {
-                        secondElement.innerHTML = itemC.item;
-                        if(itemC.id === 3) {
-                            playerCount.innerHTML = counter;
-                            addClassForWinner(firstElement);
-                        } else if(itemP.id === itemC.id) {
-                            console.log('remis');
-                        } if(itemC.id === 1) {
-                            computerCount.innerHTML = counter;
-                            addClassForWinner(secondElement);
-                        }
-                    });
                 });
-            });
-        }
-    }
-
-    const returnItemsScissors = () => {
-        for(let i = 0; i < displayItems.length; i++) {
-            displayItems[2].addEventListener('click', () => {
-                createItemPlayer();
-                createItemComputer();
-                allItems.forEach(itemP => {
-                    if(itemP.id === 3) {
-                        firstElement.innerHTML = itemP.item;
+            }
+            if(el.id === 2) {
+                playStone.addEventListener('click', () => {
+                    const stone = el.item;
+                    showPlayerItem.innerHTML = stone;
+                    showComputerItem.innerHTML = randomItem();
+                    counter++;
+                    if(counter) {
+                        if(randomItem() === 1) {
+                            console.log('Computer Wins');
+                            } else if(randomItem() === 2) {
+                                console.log('Draw');
+                            } else if(randomItem() === 3) {
+                                console.log('Player wins');
+                        } else {
+                            return;
+                        }
                     }
-                    randomItem.forEach(itemC => {
-                        secondElement.innerHTML = itemC.item;
-                        if(itemC.id === 1) {
-                            playerCount.innerHTML = counter;
-                            addClassForWinner(firstElement);
-                        } else if(itemP.id === itemC.id) {
-                            console.log('remis');
-                        } if(itemC.id === 2) {
-                            computerCount.innerHTML = counter;
-                            addClassForWinner(secondElement);
-                        }
-                    });
                 });
-            });
-        }
+            }
+            if(el.id === 3) {
+                playScissors.addEventListener('click', () => {
+                    const scissors = el.item;
+                    showPlayerItem.innerHTML = scissors;
+                    showComputerItem.innerHTML = randomItem();
+                    counter++;
+                    if(counter) {
+                        if(randomItem() === 1) {
+                            console.log('Player Wins');
+                            } else if(randomItem() === 2) {
+                                console.log('Computer Wins');
+                            } else if(randomItem() === 3) {
+                                console.log('Draw');
+                        } else {
+                            return;
+                        }
+                    }
+                });
+            }
+        });
     }
-
 
     return {
         showReturnItems: () => {
             displayItemsPlayer();
-            returnItemsPaper();
-            returnItemsStone();
-            returnItemsScissors();
         }
     }
 
 })();
 
 playGame.showReturnItems();
+
+
+
 
 

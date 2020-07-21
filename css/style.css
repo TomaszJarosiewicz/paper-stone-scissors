@@ -59,7 +59,7 @@ body {
   font-weight: 300;
 }
 
-.container .grid .flex span.count, .container .grid .flex span.computer-count {
+.container .grid .flex span.player-count, .container .grid .flex span.computer-count {
   margin-left: 16px;
   font-weight: 400;
 }

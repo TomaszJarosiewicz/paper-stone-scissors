@@ -62,7 +62,7 @@ body {
                 text-transform: uppercase;
                 font-weight: 300;
 
-                &.count, &.computer-count {
+                &.player-count, &.computer-count {
                     margin-left: 16px;
                     font-weight: 400;
                 }
@@ -97,6 +97,7 @@ body {
                 }
             }
         }
+
         .game {
             grid-column: span 3;
             display: flex;
