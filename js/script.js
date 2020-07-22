@@ -13,7 +13,7 @@ const items = [
     }
 ];
 
-let allItems = Object.assign(items);
+const allItems = Object.assign(items);
 const playPaper = document.querySelector('#playPaper');
 const playStone = document.querySelector('#playStone');
 const playScissors = document.querySelector('#playScissors');
