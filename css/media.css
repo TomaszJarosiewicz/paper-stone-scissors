@@ -1,0 +1,229 @@
+/*
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+@media (min-width: 1025px) {
+  body {
+    font-size: 20px;
+  }
+  .fas {
+    font-size: 46px;
+  }
+  .winner {
+    width: 100px;
+    height: 100px;
+  }
+  .winner > .fas {
+    font-size: 46px;
+  }
+  .container {
+    max-width: 1140px;
+  }
+  .container .grid .flex span.player, .container .grid .flex span.player-count, .container .grid .flex span.computer-count {
+    margin-left: 16px;
+  }
+  .container .grid .flex:nth-child(4) .item, .container .grid .flex:nth-child(6) .item {
+    border: 4px solid #494747;
+    width: 100px;
+    height: 100px;
+  }
+  .container .grid .flex:nth-child(4) .item:hover, .container .grid .flex:nth-child(6) .item:hover {
+    background: #494747;
+  }
+  .container .grid .flex:nth-child(4) .item:hover .fas, .container .grid .flex:nth-child(6) .item:hover .fas {
+    color: #fff;
+  }
+  .container .grid:nth-child(2) {
+    height: 25vh;
+  }
+  .game-over .box {
+    width: 75%;
+    height: 75vh;
+  }
+}
+
+/* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    font-size: 20px;
+  }
+  .fas {
+    font-size: 46px;
+  }
+  .winner {
+    width: 100px;
+    height: 100px;
+  }
+  .winner > .fas {
+    font-size: 46px;
+  }
+  .container {
+    max-width: 700px;
+  }
+  .container .grid .flex span.player, .container .grid .flex span.player-count, .container .grid .flex span.computer-count {
+    margin-left: 16px;
+  }
+  .container .grid .flex:nth-child(4) .item, .container .grid .flex:nth-child(6) .item {
+    border: 4px solid #494747;
+    width: 100px;
+    height: 100px;
+  }
+  .container .grid .flex:nth-child(4) .item:hover, .container .grid .flex:nth-child(6) .item:hover {
+    background: #494747;
+  }
+  .container .grid .flex:nth-child(4) .item:hover .fas, .container .grid .flex:nth-child(6) .item:hover .fas {
+    color: #fff;
+  }
+  .container .grid:nth-child(2) {
+    height: 25vh;
+  }
+  .game-over .box {
+    width: 75%;
+    height: 75vh;
+  }
+}
+
+/*
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  body {
+    font-size: 20px;
+  }
+  .fas {
+    font-size: 40px;
+  }
+  .winner {
+    width: 84px;
+    height: 84px;
+  }
+  .winner > .fas {
+    font-size: 42px;
+  }
+  .container {
+    max-width: 780px;
+  }
+  .container .grid .flex span.player, .container .grid .flex span.player-count, .container .grid .flex span.computer-count {
+    margin-left: 16px;
+  }
+  .container .grid .flex:nth-child(4) .item, .container .grid .flex:nth-child(6) .item {
+    border: 4px solid #494747;
+    width: 80px;
+    height: 80px;
+  }
+  .container .grid .flex:nth-child(4) .item:hover, .container .grid .flex:nth-child(6) .item:hover {
+    background: #494747;
+  }
+  .container .grid .flex:nth-child(4) .item:hover .fas, .container .grid .flex:nth-child(6) .item:hover .fas {
+    color: #fff;
+  }
+  .container .grid:nth-child(2) {
+    height: 25vh;
+  }
+  .game-over .box {
+    width: 100%;
+    height: 100vh;
+  }
+}
+
+/*
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+@media (min-width: 481px) and (max-width: 767px) {
+  body {
+    font-size: 17px;
+  }
+  .fas {
+    font-size: 35px;
+  }
+  .winner {
+    width: 80px;
+    height: 80px;
+  }
+  .winner > .fas {
+    font-size: 38px;
+  }
+  .container {
+    max-width: 600px;
+  }
+  .container .grid .flex span.player, .container .grid .flex span.player-count, .container .grid .flex span.computer-count {
+    margin-left: 16px;
+  }
+  .container .grid .flex:nth-child(4) .item, .container .grid .flex:nth-child(6) .item {
+    border: 3px solid #494747;
+    width: 76px;
+    height: 76px;
+  }
+  .container .grid .flex:nth-child(4) .item:hover, .container .grid .flex:nth-child(6) .item:hover {
+    background: #494747;
+  }
+  .container .grid .flex:nth-child(4) .item:hover .fas, .container .grid .flex:nth-child(6) .item:hover .fas {
+    color: #fff;
+  }
+  .container .grid:nth-child(2) {
+    height: 25vh;
+  }
+  .game-over .box {
+    width: 100%;
+    height: 100vh;
+  }
+}
+
+/*
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+@media (min-width: 320px) and (max-width: 480px) {
+  body {
+    font-size: 17px;
+  }
+  .fas {
+    font-size: 35px;
+  }
+  .winner {
+    width: 65px;
+    height: 65px;
+  }
+  .winner > .fas {
+    font-size: 38px;
+  }
+  .container {
+    max-width: 400px;
+    padding: 10px;
+  }
+  .container .grid .flex span.player, .container .grid .flex span.player-count, .container .grid .flex span.computer-count {
+    margin-left: 8px;
+  }
+  .container .grid .flex:nth-child(2) {
+    grid-column: span 3;
+    grid-row: 2;
+    text-align: center;
+  }
+  .container .grid .flex:nth-child(3) {
+    grid-column: 3;
+    justify-content: flex-end;
+  }
+  .container .grid .flex:nth-child(4) .item .fas, .container .grid .flex:nth-child(6) .item .fas {
+    color: #494747;
+  }
+  .container .grid:nth-child(2) {
+    height: 22vh;
+  }
+  .container .grid:nth-child(2) .flex:nth-child(1) {
+    grid-row: 1;
+  }
+  .container .grid:nth-child(2) .flex:nth-child(2) {
+    grid-row: 1;
+  }
+  .game-over .box {
+    width: 100%;
+    height: 100vh;
+  }
+}
+
+/*# sourceMappingURL=media.css.map */
