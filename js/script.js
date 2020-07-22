@@ -23,7 +23,6 @@ const game = document.querySelector('.game');
 const playerCount = document.querySelector('.player-count');
 const computerCount = document.querySelector('.computer-count');
 let chooseItem;
-let counter = 1;
 
 playerCount.innerHTML = 0;
 computerCount.innerHTML = 0;
@@ -52,17 +51,20 @@ const playGame = (() => {
                     const paper = el.item;
                     showPlayerItem.innerHTML = paper;
                     showComputerItem.innerHTML = randomItem();
-                    counter++;
-                    if(counter) {
-                        if(randomItem() === 1) {
+                    switch(randomItem()) {
+                        case 1: {
                             console.log('Draw');
-                            return;
-                            } else if(randomItem() === 2) {
-                                console.log('Player wins');
-                            } else if(randomItem() === 3) {
-                                console.log('Computer wins');
-                        } else {
-                            return;
+                        break;
+                        }
+                        case 2: {
+                            console.log('Player wins');
+                            playerCount.innerHTML = 1 + parseInt(playerCount.innerHTML);
+                        break;
+                        }
+                        case 3: {
+                            console.log('Computer wins');
+                            computerCount.innerHTML = 1 + parseInt(computerCount.innerHTML);
+                        break;
                         }
                     }
                 });
@@ -72,16 +74,20 @@ const playGame = (() => {
                     const stone = el.item;
                     showPlayerItem.innerHTML = stone;
                     showComputerItem.innerHTML = randomItem();
-                    counter++;
-                    if(counter) {
-                        if(randomItem() === 1) {
+                    switch(randomItem()) {
+                        case 1: {
                             console.log('Computer Wins');
-                            } else if(randomItem() === 2) {
-                                console.log('Draw');
-                            } else if(randomItem() === 3) {
-                                console.log('Player wins');
-                        } else {
-                            return;
+                            computerCount.innerHTML = 1 + parseInt(computerCount.innerHTML);
+                        break;
+                        }
+                        case 2: {
+                            console.log('Draw');
+                        break;
+                        }
+                        case 3: {
+                            console.log('Player wins');
+                            playerCount.innerHTML = 1 + parseInt(playerCount.innerHTML);
+                        break;
                         }
                     }
                 });
@@ -91,16 +97,20 @@ const playGame = (() => {
                     const scissors = el.item;
                     showPlayerItem.innerHTML = scissors;
                     showComputerItem.innerHTML = randomItem();
-                    counter++;
-                    if(counter) {
-                        if(randomItem() === 1) {
+                    switch(randomItem()) {
+                        case 1: {
                             console.log('Player Wins');
-                            } else if(randomItem() === 2) {
-                                console.log('Computer Wins');
-                            } else if(randomItem() === 3) {
-                                console.log('Draw');
-                        } else {
-                            return;
+                            playerCount.innerHTML = 1 + parseInt(playerCount.innerHTML);
+                        break;
+                        }
+                        case 2: {
+                            console.log('Computer Wins');
+                            computerCount.innerHTML = 1 + parseInt(computerCount.innerHTML);
+                        break;
+                        }
+                        case 3: {
+                            console.log('Draw');
+                        break;
                         }
                     }
                 });
