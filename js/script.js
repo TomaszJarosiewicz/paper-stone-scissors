@@ -14,11 +14,6 @@ const items = [
 ];
 
 const allItems = Object.assign(items);
-const win = document.querySelector('.game-over');
-const winPlayer = document.querySelector('.win-player');
-const text = document.querySelector('.text');
-const button = document.querySelector('button');
-const round = document.querySelector('#round');
 const player = document.querySelector('.player');
 const playPaper = document.querySelector('#playPaper');
 const playStone = document.querySelector('#playStone');
@@ -26,8 +21,15 @@ const playScissors = document.querySelector('#playScissors');
 const showPlayerItem = document.querySelector('.showPlayerItem');
 const showComputerItem = document.querySelector('.showComputerItem');
 const game = document.querySelector('.game');
+const round = document.querySelector('#round');
 const playerCount = document.querySelector('.player-count');
 const computerCount = document.querySelector('.computer-count');
+
+const win = document.querySelector('.game-over');
+const winPlayer = document.querySelector('.win-player');
+const text = document.querySelector('.text');
+const button = document.querySelector('button');
+
 let playerName;
 let chooseItem;
 let counter = 0;
@@ -58,7 +60,7 @@ const playGame = (() => {
         elementRemove.classList.remove('winner');
     }
 
-    const displayItemsPlayer = () => {
+    const displayItems = () => {
         allItems.forEach(el => {
             if(el.id === 1) {
                 playPaper.addEventListener('click', () => {
@@ -153,17 +155,18 @@ const playGame = (() => {
     }
 
     const gameOver = () => {
+        const theWinner = 'the winner <br /> is';
         if(counter > 20) {
             round.innerHTML = 20;
             win.style.display = 'block';
             if(playerCount.innerHTML > computerCount.innerHTML) {
-                text.innerHTML = 'the winner <br /> is';
+                text.innerHTML = theWinner;
                 winPlayer.innerHTML = playerName;
             } else if(playerCount.innerHTML === computerCount.innerHTML) {
                 text.innerHTML = 'game finished';
                 winPlayer.innerHTML = 'draw';
             } else {
-                text.innerHTML = 'the winner <br /> is';
+                text.innerHTML = theWinner;
                 winPlayer.innerHTML = 'computer';
             }
         }
@@ -176,8 +179,8 @@ const playGame = (() => {
     }
 
     return {
-        showReturnItems: () => {
-            displayItemsPlayer();
+        returnGame: () => {
+            displayItems();
             writeNamePlayer();
             newGame();
         }
@@ -185,7 +188,7 @@ const playGame = (() => {
 
 })();
 
-playGame.showReturnItems();
+playGame.returnGame();
 
 
 
