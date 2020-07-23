@@ -176,6 +176,7 @@ body::after {
 
 .container .game-over .box .description {
   text-align: center;
+  text-transform: uppercase;
 }
 
 .container .game-over .box .description .fas {
@@ -187,14 +188,12 @@ body::after {
   margin-top: 30px;
   font-size: 30px;
   font-weight: 200;
-  text-transform: uppercase;
 }
 
 .container .game-over .box .description .win-player {
   margin-top: 15px;
   font-size: 40px;
   font-weight: 900;
-  text-transform: uppercase;
 }
 
 .container .game-over .box .description .btn {
@@ -206,6 +205,5 @@ body::after {
   color: #fff;
   font-size: 14px;
   letter-spacing: 1px;
-  text-transform: uppercase;
 }
 /*# sourceMappingURL=style.prefixed.css.map */
