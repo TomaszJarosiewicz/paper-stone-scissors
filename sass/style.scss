@@ -150,6 +150,7 @@ body {
 
             .description {
                 text-align: center;
+                text-transform: uppercase;
 
                 .fas {
                     font-size: $font-size + 100;
@@ -160,14 +161,12 @@ body {
                     margin-top: 30px;
                     font-size: $font-size + 10;
                     font-weight: 200;
-                    text-transform: uppercase;
                 }
 
                 .win-player {
                     margin-top: 15px;
                     font-size: $font-size + 20;
                     font-weight: 900;
-                    text-transform: uppercase;
                 }
 
                 .btn {
@@ -179,7 +178,6 @@ body {
                     color: $global;
                     font-size: $font-size - 6;
                     letter-spacing: 1px;
-                    text-transform: uppercase;
                 }
             }
         }
