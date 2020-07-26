@@ -7,6 +7,14 @@
   box-sizing: border-box;
 }
 
+:-ms-input-placeholder {
+  color: #494747;
+}
+
+::placeholder {
+  color: #494747;
+}
+
 body {
   position: relative;
   font-family: 'Lato', sans-serif;
@@ -31,29 +39,64 @@ body::after {
   z-index: -1;
 }
 
+input:focus {
+  outline: none;
+}
+
 .fas {
   color: #494747;
 }
 
-.winner {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  background: #42cc0c;
-  border-radius: 50%;
+.winner > .fas {
+  color: #42cc0c;
 }
 
-.winner > .fas {
+.yourName {
+  max-width: 100%;
+  height: 100vh;
+  background: #fff;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.yourName .box {
+  max-width: 450px;
+  width: 100%;
+  height: 300px;
+  border: 1px solid #494747;
+  border-radius: 5px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.yourName .box input {
+  width: 250px;
+  margin: 20px 10px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.yourName .box .btn {
+  width: 140px;
+  padding: 14px;
+  background: #5cd62b;
+  border: 0;
   color: #fff;
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .container {
-  position: relative;
   margin: 0 auto;
   z-index: 1;
 }
@@ -65,7 +108,7 @@ body::after {
       grid-template-columns: repeat(3, 1fr);
   -ms-flex-align: center;
       align-items: center;
-  height: 75vh;
+  height: 100vh;
 }
 
 .container .grid .flex {
@@ -82,15 +125,12 @@ body::after {
 .container .grid .flex span {
   text-transform: uppercase;
   font-weight: 300;
+  font-size: 20px;
+  font-weight: 300;
 }
 
-.container .grid .flex span.player, .container .grid .flex span.player-count, .container .grid .flex span.computer-count {
-  font-weight: 400;
-}
-
-.container .grid .flex span.select-item {
-  font-weight: 400;
-  font-size: 25px;
+.container .grid .flex span.player {
+  font-weight: 900;
 }
 
 .container .grid .flex:nth-child(1) {
@@ -98,18 +138,39 @@ body::after {
       justify-content: flex-start;
 }
 
-.container .grid .flex:nth-child(3) {
-  -ms-flex-pack: end;
-      justify-content: flex-end;
+.container .grid .flex:nth-child(2) {
+  -ms-flex-align: center;
+      align-items: center;
 }
 
-.container .grid .flex:nth-child(4), .container .grid .flex:nth-child(6) {
+.container .grid .flex:nth-child(2) span {
+  font-size: 30px;
+}
+
+.container .grid .flex:nth-child(3) {
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.container .grid .flex:nth-child(4) h2 {
+  font-size: 30px;
+}
+
+.container .grid .flex:nth-child(5) span {
+  padding: 0 50px;
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.container .grid .flex:nth-child(6), .container .grid .flex:nth-child(8) {
   -ms-grid-column: span 3;
       grid-column: span 3;
-  margin-top: 20px;
+  text-align: center;
 }
 
-.container .grid .flex:nth-child(4) .item, .container .grid .flex:nth-child(6) .item {
+.container .grid .flex:nth-child(6) .item, .container .grid .flex:nth-child(8) .item {
   margin: 0 30px;
   border-radius: 50%;
   display: -ms-flexbox;
@@ -120,9 +181,27 @@ body::after {
       justify-content: center;
 }
 
-.container .grid .flex:nth-child(4) .rounds span, .container .grid .flex:nth-child(6) .rounds span {
+.container .grid .flex:nth-child(6) .rounds span, .container .grid .flex:nth-child(8) .rounds span {
   padding: 0 10px;
-  font-size: 25px;
+  font-size: 22px;
+}
+
+.container .grid .flex:nth-child(7) {
+  -ms-grid-column: span 3;
+      grid-column: span 3;
+  text-align: center;
+}
+
+.container .grid .flex:nth-child(7) span {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.container .grid .flex:nth-child(9) {
+  -ms-grid-column: 1;
+      grid-column: 1;
+  justify-self: start;
+  text-align: left;
 }
 
 .container .grid .game {
@@ -138,23 +217,13 @@ body::after {
 }
 
 .container .grid .game > div {
-  margin: 0 50px;
+  margin: 0 90px;
 }
 
-.container .grid:nth-child(2) {
-  -ms-flex-align: center;
-      align-items: center;
-}
-
-.container .grid:nth-child(2) .flex:nth-child(1) {
-  -ms-grid-column: 1;
-      grid-column: 1;
-}
-
-.container .grid:nth-child(2) .flex:nth-child(2) {
-  -ms-grid-column: 3;
-      grid-column: 3;
-  justify-self: end;
+.container .grid .game span {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 24px;
 }
 
 .container .game-over {
