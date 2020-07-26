@@ -16,8 +16,6 @@
     }
 
     .winner {
-        width: 100px;
-        height: 100px;
 
         & > .fas {
             font-size: $font-size + 26;
@@ -32,12 +30,28 @@
             .flex {
 
                 span {
-                    &.player, &.player-count, &.computer-count {
+                    &.player {
                         margin-left: 16px;
                     }
                 }
 
-                &:nth-child(4), &:nth-child(6) {
+                &:nth-child(3) {
+                    grid-column: 2;
+                    grid-row: 2;
+                }
+
+                &:nth-child(4) {
+                    grid-column: 2;
+                    justify-content: space-around;
+                }
+
+                &:nth-child(5) {
+                    grid-column: 2;
+                    justify-content: space-around;
+                    align-self: start;
+                }
+
+                &:nth-child(6), &:nth-child(8) {
 
                     .item {
                         border: 4px solid $color-global;
@@ -53,10 +67,6 @@
                         }
                     }
                 }
-            }
-
-            &:nth-child(2) {
-                height: 25vh;
             }
         }
     }
@@ -86,8 +96,6 @@
     }
 
     .winner {
-        width: 100px;
-        height: 100px;
 
         & > .fas {
             font-size: $font-size + 26;
@@ -102,12 +110,28 @@
             .flex {
 
                 span {
-                    &.player, &.player-count, &.computer-count {
+                    &.player {
                         margin-left: 16px;
                     }
                 }
 
-                &:nth-child(4), &:nth-child(6) {
+                &:nth-child(3) {
+                    grid-column: 2;
+                    grid-row: 2;
+                }
+
+                &:nth-child(4) {
+                    grid-column: 2;
+                    justify-content: space-around;
+                }
+
+                &:nth-child(5) {
+                    grid-column: 2;
+                    justify-content: space-around;
+                    align-self: start;
+                }
+
+                &:nth-child(6), &:nth-child(8) {
 
                     .item {
                         border: 4px solid $color-global;
@@ -123,10 +147,6 @@
                         }
                     }
                 }
-            }
-
-            &:nth-child(2) {
-                height: 25vh;
             }
         }
     }
@@ -156,8 +176,6 @@
     }
 
     .winner {
-        width: 84px;
-        height: 84px;
 
         & > .fas {
             font-size: $font-size + 22;
@@ -172,12 +190,28 @@
             .flex {
 
                 span {
-                    &.player, &.player-count, &.computer-count {
+                    &.player {
                         margin-left: 16px;
                     }
                 }
 
-                &:nth-child(4), &:nth-child(6) {
+                &:nth-child(3) {
+                    grid-column: 2;
+                    grid-row: 2;
+                }
+
+                &:nth-child(4) {
+                    grid-column: 2;
+                    justify-content: space-around;
+                }
+
+                &:nth-child(5) {
+                    grid-column: 2;
+                    justify-content: space-around;
+                    align-self: start;
+                }
+
+                &:nth-child(6), &:nth-child(8) {
 
                     .item {
                         border: 4px solid $color-global;
@@ -193,10 +227,6 @@
                         }
                     }
                 }
-            }
-
-            &:nth-child(2) {
-                height: 25vh;
             }
         }
     }
@@ -226,8 +256,6 @@
     }
 
     .winner {
-        width: 80px;
-        height: 80px;
 
         & > .fas {
             font-size: $font-size + 18;
@@ -242,12 +270,28 @@
             .flex {
 
                 span {
-                    &.player, &.player-count, &.computer-count {
+                    &.player {
                         margin-left: 16px;
                     }
                 }
 
-                &:nth-child(4), &:nth-child(6) {
+                &:nth-child(3) {
+                    grid-column: 2;
+                    grid-row: 2;
+                }
+
+                &:nth-child(4) {
+                    grid-column: 2;
+                    justify-content: space-around;
+                }
+
+                &:nth-child(5) {
+                    grid-column: 2;
+                    justify-content: space-around;
+                    align-self: start;
+                }
+
+                &:nth-child(6), &:nth-child(8) {
 
                     .item {
                         border: 3px solid $color-global;
@@ -263,10 +307,6 @@
                         }
                     }
                 }
-            }
-
-            &:nth-child(2) {
-                height: 25vh;
             }
         }
     }
@@ -296,8 +336,6 @@
     }
 
     .winner {
-        width: 65px;
-        height: 65px;
 
         & > .fas {
             font-size: $font-size + 18;
@@ -313,7 +351,7 @@
             .flex {
 
                 span {
-                    &.player, &.player-count, &.computer-count {
+                    &.player {
                         margin-left: 8px;
                     }
                 }
@@ -321,15 +359,26 @@
                 &:nth-child(2) {
                     grid-column: span 3;
                     grid-row: 2;
-                    text-align: center;
                 }
 
                 &:nth-child(3) {
-                    grid-column: 3;
-                    justify-content: flex-end;
+                    grid-column: span 3;
+                    grid-row: 3;
                 }
 
-                &:nth-child(4), &:nth-child(6) {
+                &:nth-child(4) {
+                    grid-column: span 3;
+                    grid-row: 4;
+                    justify-content: space-around;
+                }
+
+                &:nth-child(5) {
+                    grid-column: span 3;
+                    grid-row: 5;
+                    justify-content: space-between;
+                }
+
+                &:nth-child(6), &:nth-child(8) {
 
                     .item {
 
@@ -337,18 +386,6 @@
                             color: $color-global;
                         }
                     }
-                }
-            }
-
-            &:nth-child(2) {
-                height: 22vh;
-
-                .flex:nth-child(1) {
-                    grid-row: 1;
-                }
-
-                .flex:nth-child(2) {
-                    grid-row: 1;
                 }
             }
         }
