@@ -92,7 +92,6 @@ const playGame = (() => {
                     round.innerHTML = counter++ + 1;
                     const paper = el.item;
                     showPlayerItem.innerHTML = paper;
-                    showComputerItem.innerHTML = randomItem();
                     switch(randomItem()) {
                         case 1: {
                             resultGame.innerHTML = 'draw';
@@ -122,7 +121,6 @@ const playGame = (() => {
                     round.innerHTML = counter++ + 1;
                     const stone = el.item;
                     showPlayerItem.innerHTML = stone;
-                    showComputerItem.innerHTML = randomItem();
                     switch(randomItem()) {
                         case 1: {
                             resultGame.innerHTML = 'computer wins';
@@ -152,7 +150,6 @@ const playGame = (() => {
                     round.innerHTML = counter++ + 1;
                     const scissors = el.item;
                     showPlayerItem.innerHTML = scissors;
-                    showComputerItem.innerHTML = randomItem();
                     switch(randomItem()) {
                         case 1: {
                             resultGame.innerHTML = playerName.value + '&nbsp;wins';
